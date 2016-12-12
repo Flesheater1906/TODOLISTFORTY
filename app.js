@@ -4,7 +4,8 @@ var tasks = require('./routes/tasks');
 var http = require('http');
 var path = require('path');
 var mongoskin = require('mongoskin');
-var db = mongoskin.db('mongodb://localhost:27017/todo?auto_reconnect', {safe:true});
+//var db = mongoskin.db('mongodb://localhost:27017/todo?auto_reconnect', {safe:true});
+var db = mongoskin.db('mongodb://localhost:27017/todo?auto_reconnect' || 'mongodb://heroku_t5q31331:qh3rihv2rqsd835vcmrv8qov39@ds051943.mlab.com:51943/heroku_t5q31331', {safe:true});
 var app = express();
 
 var favicon = require('serve-favicon'),
